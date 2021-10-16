@@ -54,7 +54,7 @@ class Chain {
         const attempt = hash.digest('hex');
 
         if(attempt.substr(0,4) === '0000'){
-            console.log('Solved: ${solution}');
+            console.log('Solved: ',{solution});
             return solution;
         }
 
@@ -106,12 +106,12 @@ class Wallet {
   }
 }
 
-const satoshi = new Wallet();
-const bob = new Wallet();
-const alice = new Wallet();
+const thejus = new Wallet();
+const lince = new Wallet();
+const austin = new Wallet();
 
-satoshi.sendMoney(50, bob.publicKey);
-bob.sendMoney(23, alice.publicKey);
-alice.sendMoney(5, bob.publicKey);
+thejus.sendMoney(50, lince.publicKey);
+lince.sendMoney(23, austin.publicKey);
+austin.sendMoney(5, lince.publicKey);
 
 console.log(Chain.instance);
